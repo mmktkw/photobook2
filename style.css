@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+/* CSSのリセット（消さないでください） */
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  font-size: 0.875rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* ここからcssを書いていきましょう */
+/* 共通項目 */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+
+/* ヘッダー */
+#header {
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.site-title {
+  width: 180px;
+  line-height: 1px;
+}
+
+.site-title a {
+  display: block;
+}
+
+
+/* メインビジュアル */
+#mainvisual {
+  margin-bottom: 60px;
+}
+
+
+/* インデックス */
+#index {
+  background-color: #f5f5f5;
+  padding: 60px;
+  margin-bottom: 60px;
+}
+
+.index-wrapper {
+  border: solid 1px #333;
+  padding: 30px;
+}
+
+.index-list {
+  display: table;
+  margin: 0 auto;
+}
+
+.index-list li {
+  margin-bottom: 20px;
+}
+
+.index-list li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ギャラリー */
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+#gallery li {
+  list-style: none;
+  width: 49%;
+  margin-bottom: 10px;
+}
+
+
+/* ディテール */
+#detail {
+  background-color: #f5f5f5;
+  padding: 60px;
+  margin-bottom: 60px;
+}
+
+.detail-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+dl {
+  border-right: solid 1px #333;
+  padding-right: 60px;
+  width: 35%;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 10px;
+}
+
+dd:last-child {
+  margin-bottom: 0;
+}
+
+.text {
+  width: 65%;
+  padding-left: 40px;
+}
+
+.text p {
+  margin-bottom: 20px;
+}
+
+.text a {
+  color: #333;
+}
+
+.text a:hover {
+  opacity: 0.8;
+}
+
+
+/* フッター */
+#footer {
+  text-align: center;
+  font-size: 0.5rem;
+  padding: 15px;
+}
+
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+
+  #header {
+    margin-top: 60px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+
+  #index {
+    padding: 40px 20px;
+  }
+
+  #gallery {
+    flex-direction: column;
+  }
+
+  #gallery li {
+    width: 100%;
+    text-align: center;
+  }
+
+  #detail {
+    padding: 40px 20px;
+  }
+
+  .detail-wrapper {
+    flex-direction: column;
+  }
+
+  dl {
+    border-right: 0;
+    border-bottom: solid 1px #333;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+
+  dd:last-child {
+    margin-bottom: 0;
+  }
+
+  .text {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 40px;
+  }
+
+  .text p {
+    margin-bottom: 20px;
+  }
+
+}
